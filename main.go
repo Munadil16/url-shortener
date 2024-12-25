@@ -6,6 +6,7 @@ import (
 
 	"github.com/Munadil16/url-shortener-server/database"
 	"github.com/Munadil16/url-shortener-server/models"
+	"github.com/Munadil16/url-shortener-server/routes"
 	"github.com/gin-gonic/gin"
 	"github.com/joho/godotenv"
 )
@@ -28,9 +29,7 @@ func main() {
 
 	r := gin.Default()
 
-	r.GET("/", func(c *gin.Context) {
-		c.JSON(200, gin.H{"message": "Hello from server"})
-	})
+	routes.Router(r)
 
 	r.Run(":" + PORT)
 }

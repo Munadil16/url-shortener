@@ -6,5 +6,5 @@ type Url struct {
 	gorm.Model
 	LongUrl    string
 	ShortUrlId string
-	Visits     string
+	Visits     uint32
 }
