@@ -14,9 +14,6 @@ type ShortenBody struct {
 	Url string `json:"url"`
 }
 
-type RedirectBody struct {
-}
-
 func Shorten(c *gin.Context) {
 	var body ShortenBody
 	c.BindJSON(&body)
