@@ -10,5 +10,5 @@ func Router(r *gin.Engine) {
 
 	urlRouter.POST("/shorten", handlers.Shorten)
 
-	urlRouter.GET("/fetch/:id", handlers.Fetch)
+	urlRouter.GET("/fetch/:id", handlers.Redirect)
 }

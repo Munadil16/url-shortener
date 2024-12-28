@@ -42,7 +42,7 @@ func Shorten(c *gin.Context) {
 
 }
 
-func Fetch(c *gin.Context) {
+func Redirect(c *gin.Context) {
 	id := c.Param("id")
 	var url models.Url
 
@@ -60,5 +60,5 @@ func Fetch(c *gin.Context) {
 
 	database.DB.Model(&url).Update("visits", gorm.Expr("visits + ?", 1))
 
-	c.JSON(200, gin.H{"message": "Url found", "longUrl": url.LongUrl})
+	c.Redirect(307, url.LongUrl)
 }

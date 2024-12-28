@@ -11,13 +11,13 @@ Install [Go](https://go.dev) on your system
 1. **Clone the repository**
 
 ```bash
-	git clone https://github.com/Munadil16/url-shortener-server.git
+git clone https://github.com/Munadil16/url-shortener-server.git
 ```
 
 2. **Navigate to repo**
 
 ```bash
-	cd url-shortener-server
+cd url-shortener-server
 ```
 
 3. **Setup the .env file** \
@@ -26,7 +26,7 @@ Install [Go](https://go.dev) on your system
 4. **Start Server**
 
 ```bash
-	go run main.go
+go run main.go
 ```
 
 ## Built with
